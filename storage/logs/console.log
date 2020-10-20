@@ -1,0 +1,544 @@
+2020-10-20 18:44:19 [-][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 18:44:19 [-][-][-][profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 18:44:19 [-][-][-][profile end][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 18:44:19 [-][-][-][error][craft\db\Connection::open] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+2020-10-20 18:44:19 [-][-][-][error][craft\db\Connection::open] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+2020-10-20 18:44:19 [-][-][-][error][craft\base\ApplicationTrait::getIsDbConnectionValid] There was a problem connecting to the database: Craft CMS can’t connect to the database with the credentials in config/db.php.
+2020-10-20 18:44:19 [-][-][-][error][craft\errors\DbConnectException] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /Users/adammiedema/craft/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /Users/adammiedema/craft/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 /Users/adammiedema/craft/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /Users/adammiedema/craft/vendor/craftcms/cms/src/db/Connection.php(152): yii\db\Connection->open()
+#3 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(812): craft\db\Connection->open()
+#4 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(291): craft\console\Application->getIsDbConnectionValid()
+#5 /Users/adammiedema/craft/vendor/craftcms/cms/src/helpers/App.php(604): craft\console\Application->getIsInstalled()
+#6 /Users/adammiedema/craft/vendor/craftcms/cms/src/config/app.php(266): craft\helpers\App::projectConfigConfig()
+#7 [internal function]: {closure}()
+#8 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(536): call_user_func_array(Object(Closure), Array)
+#9 /Users/adammiedema/craft/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->invoke(Object(Closure), Array)
+#10 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Object(Closure))
+#11 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('projectConfig', true)
+#12 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(157): yii\base\Module->get('projectConfig', true)
+#13 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1274): craft\console\Application->get('projectConfig')
+#14 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1440): craft\console\Application->getProjectConfig()
+#15 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1398): craft\console\Application->_setTimeZone()
+#16 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(46): craft\console\Application->_preInit()
+#17 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\console\Application->init()
+#18 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#19 /Users/adammiedema/craft/vendor/yiisoft/yii2/console/Application.php(89): yii\base\Application->__construct(Array)
+#20 [internal function]: yii\console\Application->__construct(Array)
+#21 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(406): ReflectionClass->newInstanceArgs(Array)
+#22 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(165): yii\di\Container->build('craft\\console\\A...', Array, Array)
+#23 /Users/adammiedema/craft/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('craft\\console\\A...', Array, Array)
+#24 /Users/adammiedema/craft/vendor/craftcms/cms/bootstrap/bootstrap.php(246): yii\BaseYii::createObject(Array)
+#25 /Users/adammiedema/craft/vendor/craftcms/cms/bootstrap/console.php(51): require('/Users/adammied...')
+#26 /Users/adammiedema/craft/craft(22): require('/Users/adammied...')
+#27 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /Users/adammiedema/craft/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /Users/adammiedema/craft/vendor/craftcms/cms/src/db/Connection.php(152): yii\db\Connection->open()
+#1 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(812): craft\db\Connection->open()
+#2 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(291): craft\console\Application->getIsDbConnectionValid()
+#3 /Users/adammiedema/craft/vendor/craftcms/cms/src/helpers/App.php(604): craft\console\Application->getIsInstalled()
+#4 /Users/adammiedema/craft/vendor/craftcms/cms/src/config/app.php(266): craft\helpers\App::projectConfigConfig()
+#5 [internal function]: {closure}()
+#6 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(536): call_user_func_array(Object(Closure), Array)
+#7 /Users/adammiedema/craft/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->invoke(Object(Closure), Array)
+#8 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Object(Closure))
+#9 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('projectConfig', true)
+#10 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(157): yii\base\Module->get('projectConfig', true)
+#11 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1274): craft\console\Application->get('projectConfig')
+#12 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1440): craft\console\Application->getProjectConfig()
+#13 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1398): craft\console\Application->_setTimeZone()
+#14 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(46): craft\console\Application->_preInit()
+#15 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\console\Application->init()
+#16 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#17 /Users/adammiedema/craft/vendor/yiisoft/yii2/console/Application.php(89): yii\base\Application->__construct(Array)
+#18 [internal function]: yii\console\Application->__construct(Array)
+#19 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(406): ReflectionClass->newInstanceArgs(Array)
+#20 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(165): yii\di\Container->build('craft\\console\\A...', Array, Array)
+#21 /Users/adammiedema/craft/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('craft\\console\\A...', Array, Array)
+#22 /Users/adammiedema/craft/vendor/craftcms/cms/bootstrap/bootstrap.php(246): yii\BaseYii::createObject(Array)
+#23 /Users/adammiedema/craft/vendor/craftcms/cms/bootstrap/console.php(51): require('/Users/adammied...')
+#24 /Users/adammiedema/craft/craft(22): require('/Users/adammied...')
+#25 {main}
+
+Next craft\errors\DbConnectException: Craft CMS can’t connect to the database with the credentials in config/db.php. in /Users/adammiedema/craft/vendor/craftcms/cms/src/db/Connection.php:173
+Stack trace:
+#0 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(812): craft\db\Connection->open()
+#1 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(291): craft\console\Application->getIsDbConnectionValid()
+#2 /Users/adammiedema/craft/vendor/craftcms/cms/src/helpers/App.php(604): craft\console\Application->getIsInstalled()
+#3 /Users/adammiedema/craft/vendor/craftcms/cms/src/config/app.php(266): craft\helpers\App::projectConfigConfig()
+#4 [internal function]: {closure}()
+#5 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(536): call_user_func_array(Object(Closure), Array)
+#6 /Users/adammiedema/craft/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->invoke(Object(Closure), Array)
+#7 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Object(Closure))
+#8 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('projectConfig', true)
+#9 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(157): yii\base\Module->get('projectConfig', true)
+#10 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1274): craft\console\Application->get('projectConfig')
+#11 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1440): craft\console\Application->getProjectConfig()
+#12 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1398): craft\console\Application->_setTimeZone()
+#13 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(46): craft\console\Application->_preInit()
+#14 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\console\Application->init()
+#15 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#16 /Users/adammiedema/craft/vendor/yiisoft/yii2/console/Application.php(89): yii\base\Application->__construct(Array)
+#17 [internal function]: yii\console\Application->__construct(Array)
+#18 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(406): ReflectionClass->newInstanceArgs(Array)
+#19 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(165): yii\di\Container->build('craft\\console\\A...', Array, Array)
+#20 /Users/adammiedema/craft/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('craft\\console\\A...', Array, Array)
+#21 /Users/adammiedema/craft/vendor/craftcms/cms/bootstrap/bootstrap.php(246): yii\BaseYii::createObject(Array)
+#22 /Users/adammiedema/craft/vendor/craftcms/cms/bootstrap/console.php(51): require('/Users/adammied...')
+#23 /Users/adammiedema/craft/craft(22): require('/Users/adammied...')
+#24 {main}
+2020-10-20 18:44:19 [-][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\shell\Bootstrap::bootstrap()
+2020-10-20 18:44:19 [-][-][-][trace][yii\base\Application::bootstrap] Bootstrap with craft\queue\Queue::bootstrap()
+2020-10-20 18:44:19 [-][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 18:44:19 [-][-][-][profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 18:44:19 [-][-][-][profile end][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 18:44:19 [-][-][-][error][craft\db\Connection::open] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+2020-10-20 18:44:19 [-][-][-][error][craft\db\Connection::open] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+2020-10-20 18:44:19 [-][-][-][trace][yii\base\Controller::runAction] Route to run: setup/welcome
+2020-10-20 18:44:19 [-][-][-][trace][yii\base\InlineAction::runWithParams] Running action: craft\console\controllers\SetupController::actionWelcome()
+2020-10-20 18:44:19 [-][-][-][trace][yii\base\Controller::runAction] Route to run: setup/app-id
+2020-10-20 18:44:19 [-][-][-][trace][yii\base\InlineAction::runWithParams] Running action: craft\console\controllers\SetupController::actionAppId()
+2020-10-20 18:44:19 [-][-][-][trace][yii\base\Controller::runAction] Route to run: setup/security-key
+2020-10-20 18:44:19 [-][-][-][trace][yii\base\InlineAction::runWithParams] Running action: craft\console\controllers\SetupController::actionSecurityKey()
+2020-10-20 18:44:19 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'COMPOSER_BINARY' => '/usr/local/Cellar/composer/1.10.15/bin/composer'
+    'SHELL' => '/bin/zsh'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/0_/7df2n2f52yq0nzsj_yk0z9pm0000gn/T/'
+    'GRADLE_HOME' => '/Users/adammiedema/.sdkman/candidates/gradle/current'
+    'TERM_PROGRAM_VERSION' => '433'
+    'TERM_SESSION_ID' => 'EF946B7E-1763-4197-A434-F5DA49689763'
+    'SDKMAN_PLATFORM' => 'Darwin'
+    'USER' => 'adammiedema'
+    'SDKMAN_CANDIDATES_API' => 'https://api.sdkman.io/2'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.AqphkKg7u6/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'COMPOSER_ROOT_VERSION' => '1.0.62'
+    'PATH' => '/Users/adammiedema/craft/vendor/bin:/Users/adammiedema/.composer/vendor/bin:/Users/adammiedema/.yarn/bin:/Users/adammiedema/.config/yarn/global/node_modules/.bin:/usr/local/sbin:/Users/adammiedema/.sdkman/candidates/java/current/bin:/Users/adammiedema/.sdkman/candidates/gradle/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Mono.framework/Versions/Current/Commands'
+    '_' => '/usr/local/Cellar/php/7.4.11/bin/php'
+    'PWD' => '/Users/adammiedema/craft'
+    'JAVA_HOME' => '/Users/adammiedema/.sdkman/candidates/java/current'
+    'COMPOSER_DEV_MODE' => '1'
+    'LANG' => 'en_US.UTF-8'
+    'SDKMAN_VERSION' => '5.8.1+484'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '2'
+    'HOME' => '/Users/adammiedema'
+    'LANGUAGE' => 'C'
+    'LOGNAME' => 'adammiedema'
+    'SDKMAN_DIR' => '/Users/adammiedema/.sdkman'
+    'GIT_ASKPASS' => 'echo'
+    'SDKMAN_CANDIDATES_DIR' => '/Users/adammiedema/.sdkman/candidates'
+    'PHP_SELF' => 'craft'
+    'SCRIPT_NAME' => 'craft'
+    'SCRIPT_FILENAME' => 'craft'
+    'PATH_TRANSLATED' => 'craft'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1603219459.3053
+    'REQUEST_TIME' => 1603219459
+    'argv' => [
+        0 => 'craft'
+        1 => 'setup/welcome'
+    ]
+    'argc' => 2
+    'ENVIRONMENT' => 'dev'
+    'APP_ID' => 'CraftCMS'
+    'SECURITY_KEY' => ''
+    'DB_DRIVER' => 'mysql'
+    'DB_SERVER' => '127.0.0.1'
+    'DB_PORT' => ''
+    'DB_DATABASE' => ''
+    'DB_USER' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_SCHEMA' => 'public'
+    'DB_TABLE_PREFIX' => ''
+]
+2020-10-20 18:46:39 [-][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 18:46:39 [-][-][-][profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 18:46:39 [-][-][-][profile end][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 18:46:39 [-][-][-][error][craft\db\Connection::open] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+2020-10-20 18:46:39 [-][-][-][error][craft\db\Connection::open] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+2020-10-20 18:46:39 [-][-][-][error][craft\base\ApplicationTrait::getIsDbConnectionValid] There was a problem connecting to the database: Craft CMS can’t connect to the database with the credentials in config/db.php.
+2020-10-20 18:46:39 [-][-][-][error][craft\errors\DbConnectException] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /Users/adammiedema/craft/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /Users/adammiedema/craft/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 /Users/adammiedema/craft/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /Users/adammiedema/craft/vendor/craftcms/cms/src/db/Connection.php(152): yii\db\Connection->open()
+#3 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(812): craft\db\Connection->open()
+#4 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(291): craft\console\Application->getIsDbConnectionValid()
+#5 /Users/adammiedema/craft/vendor/craftcms/cms/src/helpers/App.php(604): craft\console\Application->getIsInstalled()
+#6 /Users/adammiedema/craft/vendor/craftcms/cms/src/config/app.php(266): craft\helpers\App::projectConfigConfig()
+#7 [internal function]: {closure}()
+#8 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(536): call_user_func_array(Object(Closure), Array)
+#9 /Users/adammiedema/craft/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->invoke(Object(Closure), Array)
+#10 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Object(Closure))
+#11 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('projectConfig', true)
+#12 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(157): yii\base\Module->get('projectConfig', true)
+#13 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1274): craft\console\Application->get('projectConfig')
+#14 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1440): craft\console\Application->getProjectConfig()
+#15 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1398): craft\console\Application->_setTimeZone()
+#16 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(46): craft\console\Application->_preInit()
+#17 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\console\Application->init()
+#18 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#19 /Users/adammiedema/craft/vendor/yiisoft/yii2/console/Application.php(89): yii\base\Application->__construct(Array)
+#20 [internal function]: yii\console\Application->__construct(Array)
+#21 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(406): ReflectionClass->newInstanceArgs(Array)
+#22 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(165): yii\di\Container->build('craft\\console\\A...', Array, Array)
+#23 /Users/adammiedema/craft/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('craft\\console\\A...', Array, Array)
+#24 /Users/adammiedema/craft/vendor/craftcms/cms/bootstrap/bootstrap.php(246): yii\BaseYii::createObject(Array)
+#25 /Users/adammiedema/craft/vendor/craftcms/cms/bootstrap/console.php(51): require('/Users/adammied...')
+#26 /Users/adammiedema/craft/craft(22): require('/Users/adammied...')
+#27 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /Users/adammiedema/craft/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /Users/adammiedema/craft/vendor/craftcms/cms/src/db/Connection.php(152): yii\db\Connection->open()
+#1 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(812): craft\db\Connection->open()
+#2 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(291): craft\console\Application->getIsDbConnectionValid()
+#3 /Users/adammiedema/craft/vendor/craftcms/cms/src/helpers/App.php(604): craft\console\Application->getIsInstalled()
+#4 /Users/adammiedema/craft/vendor/craftcms/cms/src/config/app.php(266): craft\helpers\App::projectConfigConfig()
+#5 [internal function]: {closure}()
+#6 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(536): call_user_func_array(Object(Closure), Array)
+#7 /Users/adammiedema/craft/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->invoke(Object(Closure), Array)
+#8 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Object(Closure))
+#9 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('projectConfig', true)
+#10 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(157): yii\base\Module->get('projectConfig', true)
+#11 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1274): craft\console\Application->get('projectConfig')
+#12 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1440): craft\console\Application->getProjectConfig()
+#13 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1398): craft\console\Application->_setTimeZone()
+#14 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(46): craft\console\Application->_preInit()
+#15 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\console\Application->init()
+#16 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#17 /Users/adammiedema/craft/vendor/yiisoft/yii2/console/Application.php(89): yii\base\Application->__construct(Array)
+#18 [internal function]: yii\console\Application->__construct(Array)
+#19 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(406): ReflectionClass->newInstanceArgs(Array)
+#20 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(165): yii\di\Container->build('craft\\console\\A...', Array, Array)
+#21 /Users/adammiedema/craft/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('craft\\console\\A...', Array, Array)
+#22 /Users/adammiedema/craft/vendor/craftcms/cms/bootstrap/bootstrap.php(246): yii\BaseYii::createObject(Array)
+#23 /Users/adammiedema/craft/vendor/craftcms/cms/bootstrap/console.php(51): require('/Users/adammied...')
+#24 /Users/adammiedema/craft/craft(22): require('/Users/adammied...')
+#25 {main}
+
+Next craft\errors\DbConnectException: Craft CMS can’t connect to the database with the credentials in config/db.php. in /Users/adammiedema/craft/vendor/craftcms/cms/src/db/Connection.php:173
+Stack trace:
+#0 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(812): craft\db\Connection->open()
+#1 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(291): craft\console\Application->getIsDbConnectionValid()
+#2 /Users/adammiedema/craft/vendor/craftcms/cms/src/helpers/App.php(604): craft\console\Application->getIsInstalled()
+#3 /Users/adammiedema/craft/vendor/craftcms/cms/src/config/app.php(266): craft\helpers\App::projectConfigConfig()
+#4 [internal function]: {closure}()
+#5 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(536): call_user_func_array(Object(Closure), Array)
+#6 /Users/adammiedema/craft/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->invoke(Object(Closure), Array)
+#7 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Object(Closure))
+#8 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('projectConfig', true)
+#9 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(157): yii\base\Module->get('projectConfig', true)
+#10 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1274): craft\console\Application->get('projectConfig')
+#11 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1440): craft\console\Application->getProjectConfig()
+#12 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1398): craft\console\Application->_setTimeZone()
+#13 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(46): craft\console\Application->_preInit()
+#14 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\console\Application->init()
+#15 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#16 /Users/adammiedema/craft/vendor/yiisoft/yii2/console/Application.php(89): yii\base\Application->__construct(Array)
+#17 [internal function]: yii\console\Application->__construct(Array)
+#18 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(406): ReflectionClass->newInstanceArgs(Array)
+#19 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(165): yii\di\Container->build('craft\\console\\A...', Array, Array)
+#20 /Users/adammiedema/craft/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('craft\\console\\A...', Array, Array)
+#21 /Users/adammiedema/craft/vendor/craftcms/cms/bootstrap/bootstrap.php(246): yii\BaseYii::createObject(Array)
+#22 /Users/adammiedema/craft/vendor/craftcms/cms/bootstrap/console.php(51): require('/Users/adammied...')
+#23 /Users/adammiedema/craft/craft(22): require('/Users/adammied...')
+#24 {main}
+2020-10-20 18:46:39 [-][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\shell\Bootstrap::bootstrap()
+2020-10-20 18:46:39 [-][-][-][trace][yii\base\Application::bootstrap] Bootstrap with craft\queue\Queue::bootstrap()
+2020-10-20 18:46:39 [-][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 18:46:39 [-][-][-][profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 18:46:39 [-][-][-][profile end][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 18:46:39 [-][-][-][error][craft\db\Connection::open] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+2020-10-20 18:46:39 [-][-][-][error][craft\db\Connection::open] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+2020-10-20 18:46:39 [-][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 18:46:39 [-][-][-][profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 18:46:39 [-][-][-][profile end][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 18:46:39 [-][-][-][error][craft\db\Connection::open] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+2020-10-20 18:46:39 [-][-][-][error][craft\db\Connection::open] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+2020-10-20 18:46:39 [-][-][-][error][craft\base\ApplicationTrait::getIsDbConnectionValid] There was a problem connecting to the database: Craft CMS can’t connect to the database with the credentials in config/db.php.
+2020-10-20 18:46:39 [-][-][-][error][craft\errors\DbConnectException] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /Users/adammiedema/craft/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /Users/adammiedema/craft/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 /Users/adammiedema/craft/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /Users/adammiedema/craft/vendor/craftcms/cms/src/db/Connection.php(152): yii\db\Connection->open()
+#3 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(812): craft\db\Connection->open()
+#4 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(73): craft\console\Application->getIsDbConnectionValid()
+#5 /Users/adammiedema/craft/vendor/yiisoft/yii2/console/Application.php(147): craft\console\Application->runAction('', Array)
+#6 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(craft\console\Request))
+#7 /Users/adammiedema/craft/craft(23): yii\base\Application->run()
+#8 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /Users/adammiedema/craft/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /Users/adammiedema/craft/vendor/craftcms/cms/src/db/Connection.php(152): yii\db\Connection->open()
+#1 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(812): craft\db\Connection->open()
+#2 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(73): craft\console\Application->getIsDbConnectionValid()
+#3 /Users/adammiedema/craft/vendor/yiisoft/yii2/console/Application.php(147): craft\console\Application->runAction('', Array)
+#4 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(craft\console\Request))
+#5 /Users/adammiedema/craft/craft(23): yii\base\Application->run()
+#6 {main}
+
+Next craft\errors\DbConnectException: Craft CMS can’t connect to the database with the credentials in config/db.php. in /Users/adammiedema/craft/vendor/craftcms/cms/src/db/Connection.php:173
+Stack trace:
+#0 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(812): craft\db\Connection->open()
+#1 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(73): craft\console\Application->getIsDbConnectionValid()
+#2 /Users/adammiedema/craft/vendor/yiisoft/yii2/console/Application.php(147): craft\console\Application->runAction('', Array)
+#3 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(craft\console\Request))
+#4 /Users/adammiedema/craft/craft(23): yii\base\Application->run()
+#5 {main}
+2020-10-20 18:46:39 [-][-][-][trace][yii\base\Controller::runAction] Route to run: help/index
+2020-10-20 18:46:39 [-][-][-][trace][yii\base\InlineAction::runWithParams] Running action: yii\console\controllers\HelpController::actionIndex()
+2020-10-20 18:46:39 [-][-][-][trace][yii\base\Module::getModule] Loading module: my-module
+2020-10-20 18:46:39 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'TMPDIR' => '/var/folders/0_/7df2n2f52yq0nzsj_yk0z9pm0000gn/T/'
+    'XPC_FLAGS' => '0x0'
+    'TERM_PROGRAM_VERSION' => '433'
+    'LANG' => 'en_US.UTF-8'
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'XPC_SERVICE_NAME' => '0'
+    'TERM_SESSION_ID' => '81C676DD-3AF3-4F39-8BF0-84436B1215E0'
+    'TERM' => 'xterm-256color'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.AqphkKg7u6/Listeners'
+    'SHELL' => '/bin/zsh'
+    'HOME' => '/Users/adammiedema'
+    'LOGNAME' => 'adammiedema'
+    'USER' => 'adammiedema'
+    'PATH' => '/Users/adammiedema/.composer/vendor/bin:/Users/adammiedema/.yarn/bin:/Users/adammiedema/.config/yarn/global/node_modules/.bin:/usr/local/sbin:/Users/adammiedema/.sdkman/candidates/java/current/bin:/Users/adammiedema/.sdkman/candidates/gradle/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Mono.framework/Versions/Current/Commands'
+    'SHLVL' => '1'
+    'PWD' => '/Users/adammiedema'
+    'OLDPWD' => '/Users/adammiedema'
+    'SDKMAN_DIR' => '/Users/adammiedema/.sdkman'
+    'SDKMAN_VERSION' => '5.8.1+484'
+    'SDKMAN_CANDIDATES_API' => 'https://api.sdkman.io/2'
+    'SDKMAN_PLATFORM' => 'Darwin'
+    'SDKMAN_CANDIDATES_DIR' => '/Users/adammiedema/.sdkman/candidates'
+    'GRADLE_HOME' => '/Users/adammiedema/.sdkman/candidates/gradle/current'
+    'JAVA_HOME' => '/Users/adammiedema/.sdkman/candidates/java/current'
+    '_' => '/Users/adammiedema/craft/craft'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PHP_SELF' => '/Users/adammiedema/craft/craft'
+    'SCRIPT_NAME' => '/Users/adammiedema/craft/craft'
+    'SCRIPT_FILENAME' => '/Users/adammiedema/craft/craft'
+    'PATH_TRANSLATED' => '/Users/adammiedema/craft/craft'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1603219599.2943
+    'REQUEST_TIME' => 1603219599
+    'argv' => [
+        0 => '/Users/adammiedema/craft/craft'
+    ]
+    'argc' => 1
+    'ENVIRONMENT' => 'dev'
+    'APP_ID' => 'CraftCMS--bacaba2e-6304-409f-8754-97ae51ea4860'
+    'SECURITY_KEY' => '••••••••••••••••••••••••••••••••'
+    'DB_DRIVER' => 'mysql'
+    'DB_SERVER' => '127.0.0.1'
+    'DB_PORT' => ''
+    'DB_DATABASE' => ''
+    'DB_USER' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_SCHEMA' => 'public'
+    'DB_TABLE_PREFIX' => ''
+]
+2020-10-20 19:38:24 [-][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 19:38:24 [-][-][-][profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 19:38:24 [-][-][-][profile end][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 19:38:24 [-][-][-][error][craft\db\Connection::open] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+2020-10-20 19:38:24 [-][-][-][error][craft\db\Connection::open] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+2020-10-20 19:38:24 [-][-][-][error][craft\base\ApplicationTrait::getIsDbConnectionValid] There was a problem connecting to the database: Craft CMS can’t connect to the database with the credentials in config/db.php.
+2020-10-20 19:38:24 [-][-][-][error][craft\errors\DbConnectException] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /Users/adammiedema/craft/vendor/yiisoft/yii2/db/Connection.php:710
+Stack trace:
+#0 /Users/adammiedema/craft/vendor/yiisoft/yii2/db/Connection.php(710): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 /Users/adammiedema/craft/vendor/yiisoft/yii2/db/Connection.php(631): yii\db\Connection->createPdoInstance()
+#2 /Users/adammiedema/craft/vendor/craftcms/cms/src/db/Connection.php(152): yii\db\Connection->open()
+#3 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(812): craft\db\Connection->open()
+#4 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(291): craft\console\Application->getIsDbConnectionValid()
+#5 /Users/adammiedema/craft/vendor/craftcms/cms/src/helpers/App.php(604): craft\console\Application->getIsInstalled()
+#6 /Users/adammiedema/craft/vendor/craftcms/cms/src/config/app.php(266): craft\helpers\App::projectConfigConfig()
+#7 [internal function]: {closure}()
+#8 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(536): call_user_func_array(Object(Closure), Array)
+#9 /Users/adammiedema/craft/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->invoke(Object(Closure), Array)
+#10 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Object(Closure))
+#11 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('projectConfig', true)
+#12 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(157): yii\base\Module->get('projectConfig', true)
+#13 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1274): craft\console\Application->get('projectConfig')
+#14 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1440): craft\console\Application->getProjectConfig()
+#15 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1398): craft\console\Application->_setTimeZone()
+#16 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(46): craft\console\Application->_preInit()
+#17 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\console\Application->init()
+#18 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#19 /Users/adammiedema/craft/vendor/yiisoft/yii2/console/Application.php(89): yii\base\Application->__construct(Array)
+#20 [internal function]: yii\console\Application->__construct(Array)
+#21 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(406): ReflectionClass->newInstanceArgs(Array)
+#22 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(165): yii\di\Container->build('craft\\console\\A...', Array, Array)
+#23 /Users/adammiedema/craft/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('craft\\console\\A...', Array, Array)
+#24 /Users/adammiedema/craft/vendor/craftcms/cms/bootstrap/bootstrap.php(246): yii\BaseYii::createObject(Array)
+#25 /Users/adammiedema/craft/vendor/craftcms/cms/bootstrap/console.php(51): require('/Users/adammied...')
+#26 /Users/adammiedema/craft/craft(22): require('/Users/adammied...')
+#27 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /Users/adammiedema/craft/vendor/yiisoft/yii2/db/Connection.php:642
+Stack trace:
+#0 /Users/adammiedema/craft/vendor/craftcms/cms/src/db/Connection.php(152): yii\db\Connection->open()
+#1 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(812): craft\db\Connection->open()
+#2 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(291): craft\console\Application->getIsDbConnectionValid()
+#3 /Users/adammiedema/craft/vendor/craftcms/cms/src/helpers/App.php(604): craft\console\Application->getIsInstalled()
+#4 /Users/adammiedema/craft/vendor/craftcms/cms/src/config/app.php(266): craft\helpers\App::projectConfigConfig()
+#5 [internal function]: {closure}()
+#6 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(536): call_user_func_array(Object(Closure), Array)
+#7 /Users/adammiedema/craft/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->invoke(Object(Closure), Array)
+#8 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Object(Closure))
+#9 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('projectConfig', true)
+#10 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(157): yii\base\Module->get('projectConfig', true)
+#11 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1274): craft\console\Application->get('projectConfig')
+#12 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1440): craft\console\Application->getProjectConfig()
+#13 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1398): craft\console\Application->_setTimeZone()
+#14 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(46): craft\console\Application->_preInit()
+#15 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\console\Application->init()
+#16 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#17 /Users/adammiedema/craft/vendor/yiisoft/yii2/console/Application.php(89): yii\base\Application->__construct(Array)
+#18 [internal function]: yii\console\Application->__construct(Array)
+#19 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(406): ReflectionClass->newInstanceArgs(Array)
+#20 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(165): yii\di\Container->build('craft\\console\\A...', Array, Array)
+#21 /Users/adammiedema/craft/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('craft\\console\\A...', Array, Array)
+#22 /Users/adammiedema/craft/vendor/craftcms/cms/bootstrap/bootstrap.php(246): yii\BaseYii::createObject(Array)
+#23 /Users/adammiedema/craft/vendor/craftcms/cms/bootstrap/console.php(51): require('/Users/adammied...')
+#24 /Users/adammiedema/craft/craft(22): require('/Users/adammied...')
+#25 {main}
+
+Next craft\errors\DbConnectException: Craft CMS can’t connect to the database with the credentials in config/db.php. in /Users/adammiedema/craft/vendor/craftcms/cms/src/db/Connection.php:173
+Stack trace:
+#0 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(812): craft\db\Connection->open()
+#1 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(291): craft\console\Application->getIsDbConnectionValid()
+#2 /Users/adammiedema/craft/vendor/craftcms/cms/src/helpers/App.php(604): craft\console\Application->getIsInstalled()
+#3 /Users/adammiedema/craft/vendor/craftcms/cms/src/config/app.php(266): craft\helpers\App::projectConfigConfig()
+#4 [internal function]: {closure}()
+#5 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(536): call_user_func_array(Object(Closure), Array)
+#6 /Users/adammiedema/craft/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->invoke(Object(Closure), Array)
+#7 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/ServiceLocator.php(137): yii\BaseYii::createObject(Object(Closure))
+#8 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Module.php(742): yii\di\ServiceLocator->get('projectConfig', true)
+#9 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(157): yii\base\Module->get('projectConfig', true)
+#10 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1274): craft\console\Application->get('projectConfig')
+#11 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1440): craft\console\Application->getProjectConfig()
+#12 /Users/adammiedema/craft/vendor/craftcms/cms/src/base/ApplicationTrait.php(1398): craft\console\Application->_setTimeZone()
+#13 /Users/adammiedema/craft/vendor/craftcms/cms/src/console/Application.php(46): craft\console\Application->_preInit()
+#14 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/BaseObject.php(109): craft\console\Application->init()
+#15 /Users/adammiedema/craft/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#16 /Users/adammiedema/craft/vendor/yiisoft/yii2/console/Application.php(89): yii\base\Application->__construct(Array)
+#17 [internal function]: yii\console\Application->__construct(Array)
+#18 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(406): ReflectionClass->newInstanceArgs(Array)
+#19 /Users/adammiedema/craft/vendor/yiisoft/yii2/di/Container.php(165): yii\di\Container->build('craft\\console\\A...', Array, Array)
+#20 /Users/adammiedema/craft/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get('craft\\console\\A...', Array, Array)
+#21 /Users/adammiedema/craft/vendor/craftcms/cms/bootstrap/bootstrap.php(246): yii\BaseYii::createObject(Array)
+#22 /Users/adammiedema/craft/vendor/craftcms/cms/bootstrap/console.php(51): require('/Users/adammied...')
+#23 /Users/adammiedema/craft/craft(22): require('/Users/adammied...')
+#24 {main}
+2020-10-20 19:38:24 [-][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\shell\Bootstrap::bootstrap()
+2020-10-20 19:38:25 [-][-][-][trace][yii\base\Application::bootstrap] Bootstrap with craft\queue\Queue::bootstrap()
+2020-10-20 19:38:25 [-][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 19:38:25 [-][-][-][profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 19:38:25 [-][-][-][profile end][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;dbname=;port=3306
+2020-10-20 19:38:25 [-][-][-][error][craft\db\Connection::open] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+2020-10-20 19:38:25 [-][-][-][error][craft\db\Connection::open] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+2020-10-20 19:38:25 [-][-][-][trace][yii\base\Controller::runAction] Route to run: setup/index
+2020-10-20 19:38:25 [-][-][-][trace][yii\base\InlineAction::runWithParams] Running action: craft\console\controllers\SetupController::actionIndex()
+2020-10-20 19:38:25 [-][-][-][trace][yii\base\Controller::runAction] Route to run: setup/db-creds
+2020-10-20 19:38:25 [-][-][-][trace][yii\base\InlineAction::runWithParams] Running action: craft\console\controllers\SetupController::actionDbCreds()
+2020-10-20 19:38:43 [-][-][-][info][yii\db\Connection::open] Opening DB connection: pgsql:host=127.0.0.1;port=5432;dbname=craft;
+2020-10-20 19:38:43 [-][-][-][profile begin][yii\db\Connection::open] Opening DB connection: pgsql:host=127.0.0.1;port=5432;dbname=craft;
+2020-10-20 19:38:43 [-][-][-][profile end][yii\db\Connection::open] Opening DB connection: pgsql:host=127.0.0.1;port=5432;dbname=craft;
+2020-10-20 19:38:43 [-][-][-][info][yii\db\Command::query] SELECT *
+FROM "info"
+WHERE "id"=1
+LIMIT 1
+2020-10-20 19:38:43 [-][-][-][profile begin][yii\db\Command::query] SELECT *
+FROM "info"
+WHERE "id"=1
+LIMIT 1
+2020-10-20 19:38:43 [-][-][-][profile end][yii\db\Command::query] SELECT *
+FROM "info"
+WHERE "id"=1
+LIMIT 1
+2020-10-20 19:38:24 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'TMPDIR' => '/var/folders/0_/7df2n2f52yq0nzsj_yk0z9pm0000gn/T/'
+    'XPC_FLAGS' => '0x0'
+    'TERM_PROGRAM_VERSION' => '433'
+    'LANG' => 'en_US.UTF-8'
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'XPC_SERVICE_NAME' => '0'
+    'TERM_SESSION_ID' => '15982AF0-7D5D-437A-B153-DC140AF00463'
+    'TERM' => 'xterm-256color'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.AqphkKg7u6/Listeners'
+    'SHELL' => '/bin/zsh'
+    'HOME' => '/Users/adammiedema'
+    'LOGNAME' => 'adammiedema'
+    'USER' => 'adammiedema'
+    'PATH' => '/Users/adammiedema/.composer/vendor/bin:/Users/adammiedema/.yarn/bin:/Users/adammiedema/.config/yarn/global/node_modules/.bin:/usr/local/sbin:/Users/adammiedema/.sdkman/candidates/java/current/bin:/Users/adammiedema/.sdkman/candidates/gradle/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Mono.framework/Versions/Current/Commands'
+    'SHLVL' => '1'
+    'PWD' => '/Users/adammiedema/craft'
+    'OLDPWD' => '/Users/adammiedema'
+    'SDKMAN_DIR' => '/Users/adammiedema/.sdkman'
+    'SDKMAN_VERSION' => '5.8.1+484'
+    'SDKMAN_CANDIDATES_API' => 'https://api.sdkman.io/2'
+    'SDKMAN_PLATFORM' => 'Darwin'
+    'SDKMAN_CANDIDATES_DIR' => '/Users/adammiedema/.sdkman/candidates'
+    'GRADLE_HOME' => '/Users/adammiedema/.sdkman/candidates/gradle/current'
+    'JAVA_HOME' => '/Users/adammiedema/.sdkman/candidates/java/current'
+    '_' => '/usr/local/bin/php'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PHP_SELF' => 'craft'
+    'SCRIPT_NAME' => 'craft'
+    'SCRIPT_FILENAME' => 'craft'
+    'PATH_TRANSLATED' => 'craft'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1603222704.9145
+    'REQUEST_TIME' => 1603222704
+    'argv' => [
+        0 => 'craft'
+        1 => 'setup'
+    ]
+    'argc' => 2
+    'ENVIRONMENT' => 'dev'
+    'APP_ID' => 'CraftCMS--bacaba2e-6304-409f-8754-97ae51ea4860'
+    'SECURITY_KEY' => '••••••••••••••••••••••••••••••••'
+    'DB_DRIVER' => 'mysql'
+    'DB_SERVER' => '127.0.0.1'
+    'DB_PORT' => ''
+    'DB_DATABASE' => ''
+    'DB_USER' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_SCHEMA' => 'public'
+    'DB_TABLE_PREFIX' => ''
+]
